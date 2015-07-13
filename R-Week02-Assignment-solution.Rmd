@@ -1,0 +1,29 @@
+---
+title: "WK2-R-Assignment"
+author: "VSkrelja"
+date: "July 12, 2015"
+output: html_document
+---
+
+```{r}
+calc_factorial = function(x) {
+ 
+  # find the factorial
+  f <- 1
+  for (i in 1:x) {
+    f <- f * i
+  }
+  return (f)  
+}
+
+calc_choose = function(n,r) {
+  
+  # find the combinations
+  return(calc_factorial(n)/(calc_factorial(n-r)*calc_factorial(r)))
+}
+
+# run example 
+n<-5
+r<-3
+calc_choose(5,3)
+```
